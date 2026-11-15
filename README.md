@@ -5,6 +5,8 @@ Die Programme holen ihre Updates automatisch von hier.
 
 **[→ Neueste Version herunterladen](https://github.com/CKV-Kassen-Partner/ckv-netwatch-releases/releases/latest)**
 
+**[→ Handbuch mit Suche](https://ckv-kassen-partner.github.io/ckv-netwatch-releases/handbuch/)**
+
 | Datei | Für |
 |---|---|
 | `CKV_NetWatch.exe` | CKV NetWatch für Windows |
