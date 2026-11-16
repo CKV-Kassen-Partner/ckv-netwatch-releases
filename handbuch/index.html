@@ -309,6 +309,10 @@ footer { color: var(--muted); font-size: 13px; text-align: center; padding: 10px
 <h3 id="lan-csv">CSV speichern</h3>
 <p><span class="ui">CSV speichern</span> speichert die Liste als Datei, die sich in Excel öffnen lässt. Zusätzlich legt NetWatch jeden Scan als CSV im Log-Ordner ab.</p>
 
+<h3 id="lan-loeschen">Liste löschen und Netzwechsel</h3>
+<p><span class="ui">Liste löschen</span> leert die Liste nach einer Rückfrage. Dabei vergisst NetWatch auch die Offline-Einträge (rot) und den Vergleich mit dem letzten Scan: Beim nächsten Scan ist also kein Gerät als „NEU“ markiert. Bereits gespeicherte CSV-Dateien bleiben erhalten.</p>
+<p>Wechselt die eigene IP-Adresse, z. B. weil sich der Rechner mit einem anderen WLAN verbindet oder das Netzwerkkabel umgesteckt wird, gehört die alte Liste zu einem anderen Netz. NetWatch bemerkt das innerhalb weniger Sekunden, löscht die Liste, übernimmt das neue Netz in <span class="ui">Netz / Bereich</span> und scannt neu. Über der Liste steht dann „Anschluss gewechselt: IP alt → neu“. Ein von Hand eingetragener Bereich, der nicht zum alten Netz gehörte, bleibt stehen.</p>
+
 <h3 id="lan-auto">Automatisch scannen und melden</h3>
 <p><span class="ui">Automatisch scannen alle … Sekunden</span> wiederholt den Scan (10 bis 3600 s). Unter <span class="ui">Melden</span> lässt sich wählen, wofür eine Systemmitteilung kommt:</p>
 <ul>
