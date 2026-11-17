@@ -478,13 +478,19 @@ footer { color: var(--muted); font-size: 13px; text-align: center; padding: 10px
 <tr><td class="ui">Kurzverbindungen bis (s)</td><td>Kürzere Verbindungen gelten als gewollt kurz und nicht als Abbruch.</td></tr>
 <tr><td class="ui">Überwachung beim Programmstart automatisch starten</td><td>Startet die Messung mit dem Programm.</td></tr>
 </table>
-<p><b>Überwachte Geräte</b>, je Zeile <code>Name ; IP ; Port[,Port,…]</code>:</p>
-<pre><code>Kasse 1;192.168.1.51;9100
-Kasse 2;192.168.1.52;9100,9101
-Terminal;192.168.1.60;5000</code></pre>
-<p><b>Ping-Überwachung</b>, je Zeile <code>Name ; IP oder Hostname [; Intervall s]</code>:</p>
-<pre><code>Drucker Küche;192.168.1.80;5
-AP Flur;192.168.1.2</code></pre>
+<p><b>Überwachte Geräte</b> und <b>Ping-Überwachung</b> stehen nebeneinander, jeweils als Tabelle mit Eingabefeldern darunter:</p>
+<table>
+<tr><th>Liste</th><th>Felder</th></tr>
+<tr><td class="ui">Überwachte Geräte</td><td><span class="ui">Bezeichnung</span>, <span class="ui">IP-Adresse</span>, <span class="ui">Port(s)</span>. Port leer = Standard-Port, mehrere mit Komma, z. B. <code>9100,9101</code>.</td></tr>
+<tr><td class="ui">Ping-Überwachung</td><td><span class="ui">Bezeichnung</span>, <span class="ui">IP oder Hostname</span>, <span class="ui">Intervall (s)</span>. Intervall leer = jede Sekunde, mindestens 0,5 s.</td></tr>
+</table>
+<ul>
+<li><b>Schnell anlegen:</b> Felder ausfüllen und <kbd>Enter</kbd> drücken (oder <span class="ui">Hinzufügen</span>). Die Felder leeren sich für das nächste Gerät, der Port bleibt stehen. Ohne Bezeichnung wird die IP als Name genommen.</li>
+<li><b>Ändern:</b> Zeile anklicken, die Werte stehen in den Feldern. Anpassen und <kbd>Enter</kbd> oder <span class="ui">Übernehmen</span>.</li>
+<li><b>Entfernen:</b> Zeile anklicken und <span class="ui">Entfernen</span> oder <kbd>Entf</kbd>. <span class="ui">Neu</span> oder <kbd>Esc</kbd> leert die Felder.</li>
+<li>Eine Zeile im alten Format, z. B. <code>Kasse 2;192.168.1.52;9100</code>, kann man ins Feld Bezeichnung einfügen; sie wird beim Hinzufügen aufgeteilt.</li>
+<li>Eine IP steht nur einmal je Liste. Falsche Eingaben (Port keine Zahl, Intervall unter 0,5 s) meldet die Zeile unter den Feldern.</li>
+</ul>
 <p>Geräte, die sich über die Monitor-App oder den Client melden, nimmt NetWatch automatisch auf. Änderungen gelten nach <span class="ui">Speichern</span>. Läuft die Überwachung, startet NetWatch sie auf Wunsch neu.</p>
 </section>
 
@@ -637,7 +643,7 @@ AP Flur;192.168.1.2</code></pre>
 <p>NetWatch arbeitet im eigenen Netz. Nach außen gehen nur die Update-Prüfung (GitHub, alle 7 Tage oder auf Knopfdruck), die Abfrage der Hersteller-Datenbank und, wenn gewünscht, die Abfrage der öffentlichen IP bei ipinfo.io. Logs und Berichte bleiben auf dem Rechner.</p>
 </section>
 
-<footer>CKV NetWatch · CKV Kassen-Partner GmbH · Handbuch, Stand 16.11.2026</footer>
+<footer>CKV NetWatch · CKV Kassen-Partner GmbH · Handbuch, Stand 17.11.2026</footer>
 </main>
 </div>
 
