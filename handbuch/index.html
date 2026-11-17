@@ -421,7 +421,7 @@ footer { color: var(--muted); font-size: 13px; text-align: center; padding: 10px
 <h3 id="ueb-start">Starten und Werkzeuge</h3>
 <ul>
 <li><span class="ui">▶ Start</span> / <span class="ui">■ Stopp</span> – Überwachung ein- und ausschalten. Oben im Kopf steht „Überwachung aus“ oder der aktuelle Zustand.</li>
-<li><span class="ui">Bericht</span> – erzeugt eine HTML-Auswertung mit Ursachen, Verursachern, Geräten und dem vollständigen Fehler-Log und öffnet sie im Browser.</li>
+<li><span class="ui">Bericht</span> – erzeugt eine HTML-Auswertung und öffnet sie im Browser. Oben stehen die <b>Datengrundlage</b> (gelesene Logdateien, Zahl der Einträge, Zeitraum, Starts der Überwachung) und alle <b>überwachten Geräte und Ziele</b> mit Status und letztem Log-Eintrag; läuft die Überwachung, mit dem aktuellen Stand. „nie erreicht“ heißt: Das Gerät hat seit dem Start weder auf Ping geantwortet noch sich verbunden. Darunter folgen Ursachen, Verursacher, Ping-Ausfälle, das Fehler-Log und die Störungen mit Diagnose. Gab es keine Störungen, sagt der Bericht das ausdrücklich; findet er keine Logdateien, steht auch das oben.</li>
 <li><span class="ui">Log-Ordner</span> – öffnet den Ordner mit den Logdateien.</li>
 <li><span class="ui">Logs löschen …</span> – räumt alte Logs auf. Die Datei der laufenden Messung bleibt erhalten. Bei sehr vielen Logdateien fragt NetWatch selbst nach.</li>
 <li><span class="ui">CSV exportieren …</span> – speichert alle überwachten Geräte und Ping-Ziele als CSV-Datei für Excel: Art, Bezeichnung, IP, Port(s), Intervall. Läuft die Überwachung, kommen die aktuellen Messwerte dazu (Status, Ping, Verfügbarkeit, Verlust, Störungen/Ausfälle, Ausfallzeit, letzter Fehler, Monitor-App, WLAN, Access Point, Verbindungen, Diagnose), ebenso Geräte, die sich selbst über Monitor-App oder Client gemeldet haben.</li>
@@ -444,7 +444,7 @@ footer { color: var(--muted); font-size: 13px; text-align: center; padding: 10px
 <tr><td class="ui">ERSTKONTAKT</td><td>Erste Verbindung je Gerät und Port, Programm am Port, erste Meldung der Monitor-App.</td></tr>
 <tr><td class="ui">UNTERBROCHEN</td><td>Verbindung abgebrochen, mit Verursacher und Grund.</td></tr>
 <tr><td class="ui">ABGELEHNT</td><td>Verbindungsversuch abgelehnt: kein Programm am Port oder Windows-Firewall.</td></tr>
-<tr><td class="ui">FEHLER</td><td>Programm abgestürzt oder neu gestartet, Netzwerkkarte oder Router weg, WLAN-Verlust am Gerät …</td></tr>
+<tr><td class="ui">FEHLER</td><td>Programm abgestürzt oder neu gestartet, Netzwerkkarte oder Router weg, WLAN-Verlust am Gerät, Gerät seit Start nicht erreichbar …</td></tr>
 <tr><td class="ui">DIAGNOSE</td><td>Abschluss einer Störung: Dauer, Seite, Ursache, Empfehlung.</td></tr>
 <tr><td class="ui">AUSFALL</td><td>Ein Ziel der Ping-Überwachung antwortet nicht mehr.</td></tr>
 <tr><td class="ui">BEHOBEN</td><td>Port, Netzwerkkarte oder Ping-Ziel wieder da, mit Dauer.</td></tr>
