@@ -304,7 +304,7 @@ footer { color: var(--muted); font-size: 13px; text-align: center; padding: 10px
 </ul>
 
 <h3 id="lan-ueberwachen">Geräte dauerhaft überwachen</h3>
-<p>Geräte markieren (mehrere mit <kbd>Strg</kbd>/<kbd>⌘</kbd> oder <kbd>Umschalt</kbd>) und <span class="ui">Auswahl → Ping-Überwachung</span> wählen. Sie erscheinen dann im Reiter <a href="#ueberwachung">Überwachung</a> unter „Ping-Überwachung“.</p>
+<p>Geräte markieren (mehrere mit <kbd>Strg</kbd>/<kbd>⌘</kbd> oder <kbd>Umschalt</kbd>) und <span class="ui">Auswahl → Ping-Überwachung</span> wählen. Sie erscheinen dann im Reiter <a href="#ueberwachung">Überwachung</a> unter „Ping-Überwachung“, bei laufender Überwachung sofort und ohne Neustart.</p>
 
 <h3 id="lan-csv">CSV speichern</h3>
 <p><span class="ui">CSV speichern</span> speichert die Liste als Datei, die sich in Excel öffnen lässt. Zusätzlich legt NetWatch jeden Scan als CSV im Log-Ordner ab.</p>
@@ -434,6 +434,7 @@ footer { color: var(--muted); font-size: 13px; text-align: center; padding: 10px
 <li><span class="ui">Ping-Überwachung (dauerhaft, nur Ping)</span>: Ziele, die nur per Ping beobachtet werden, z. B. Drucker oder Access Points. Mit Verfügbarkeit, Verlust, Ausfällen, Ausfallzeit und letztem Ausfall.</li>
 <li><span class="ui">Log – Erstkontakt und Fehler (wer und warum)</span>: die Ereignisse, farbig nach Art.</li>
 </ul>
+<p><b>Sortieren:</b> Ein Klick auf eine Spaltenüberschrift sortiert die Tabelle danach, ein zweiter Klick dreht die Reihenfolge um. ▲/▼ zeigt die gewählte Spalte. Zahlen, IP-Adressen, Prozente und Zeiten werden nach Wert sortiert („Kasse 2“ vor „Kasse 10“), leere Felder („–“) stehen immer unten. Die Sortierung bleibt erhalten, während sich die Werte laufend aktualisieren. Ist das Log sortiert, springt es bei neuen Einträgen nicht mehr ans Ende. Das gilt auch für die beiden Listen in den Einstellungen.</p>
 
 <h3 id="log">Das Log</h3>
 <p>Das Log (<code>logs/netwatch_log_DATUM.csv</code>, in Excel lesbar) enthält bewusst nur den <b>Erstkontakt</b> und danach nur <b>Fehler</b>, jeweils mit Verursacher und Grund:</p>
@@ -491,7 +492,7 @@ footer { color: var(--muted); font-size: 13px; text-align: center; padding: 10px
 <li>Eine Zeile im alten Format, z. B. <code>Kasse 2;192.168.1.52;9100</code>, kann man ins Feld Bezeichnung einfügen; sie wird beim Hinzufügen aufgeteilt.</li>
 <li>Eine IP steht nur einmal je Liste. Falsche Eingaben (Port keine Zahl, Intervall unter 0,5 s) meldet die Zeile unter den Feldern.</li>
 </ul>
-<p>Geräte, die sich über die Monitor-App oder den Client melden, nimmt NetWatch automatisch auf. Änderungen gelten nach <span class="ui">Speichern</span>. Läuft die Überwachung, startet NetWatch sie auf Wunsch neu.</p>
+<p>Geräte, die sich über die Monitor-App oder den Client melden, nimmt NetWatch automatisch auf. Änderungen gelten nach <span class="ui">Speichern</span>. Die <b>Ping-Überwachung</b> übernimmt neue, geänderte und entfernte Ziele sofort, auch bei laufender Überwachung; bestehende Ziele behalten ihre Messwerte. Ändern sich Geräte oder Messeinstellungen, fragt NetWatch, ob die Messung neu starten soll.</p>
 </section>
 
 <!-- ============================================================ -->
