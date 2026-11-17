@@ -424,6 +424,7 @@ footer { color: var(--muted); font-size: 13px; text-align: center; padding: 10px
 <li><span class="ui">Bericht</span> – erzeugt eine HTML-Auswertung mit Ursachen, Verursachern, Geräten und dem vollständigen Fehler-Log und öffnet sie im Browser.</li>
 <li><span class="ui">Log-Ordner</span> – öffnet den Ordner mit den Logdateien.</li>
 <li><span class="ui">Logs löschen …</span> – räumt alte Logs auf. Die Datei der laufenden Messung bleibt erhalten. Bei sehr vielen Logdateien fragt NetWatch selbst nach.</li>
+<li><span class="ui">CSV exportieren …</span> – speichert alle überwachten Geräte und Ping-Ziele als CSV-Datei für Excel: Art, Bezeichnung, IP, Port(s), Intervall. Läuft die Überwachung, kommen die aktuellen Messwerte dazu (Status, Ping, Verfügbarkeit, Verlust, Störungen/Ausfälle, Ausfallzeit, letzter Fehler, Monitor-App, WLAN, Access Point, Verbindungen, Diagnose), ebenso Geräte, die sich selbst über Monitor-App oder Client gemeldet haben.</li>
 <li><span class="ui">Einstellungen …</span> – Geräte und Erkennung einstellen (siehe <a href="#ueb-einstellungen">unten</a>).</li>
 </ul>
 
@@ -618,6 +619,9 @@ footer { color: var(--muted); font-size: 13px; text-align: center; padding: 10px
 
 <h3 id="faq-smartscreen">Windows warnt beim ersten Start</h3>
 <p>Siehe <a href="#installation-windows">Installation unter Windows</a>: <span class="ui">Weitere Informationen</span> › <span class="ui">Trotzdem ausführen</span>.</p>
+
+<h3 id="faq-python-dll">Nach einem Update unter Windows: „Failed to load Python DLL … python312.dll“</h3>
+<p>Kam bei Updates von Versionen bis V0.017.0: Das Update war schon installiert, nur der automatische Neustart danach ist gescheitert. Meldung mit <span class="ui">OK</span> schließen und das Programm normal starten. Ab V0.017.1 startet das Programm nach einem Update wieder von selbst.</p>
 
 <h3 id="faq-lan-leer">Der LAN-Scan findet auf dem Mac nur den Router</h3>
 <p>macOS hat den Zugriff aufs lokale Netzwerk nicht erlaubt. NetWatch zeigt dann einen roten Hinweis. Lösung: Systemeinstellungen › Datenschutz &amp; Sicherheit › <span class="ui">Lokales Netzwerk</span> › CKV NetWatch einschalten.</p>
