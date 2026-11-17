@@ -198,6 +198,7 @@ footer { color: var(--muted); font-size: 13px; text-align: center; padding: 10px
 <div class="warn"><b>Blaue Warnung „Der Computer wurde durch Windows geschützt“</b>Die EXE ist noch nicht digital signiert, deshalb warnt Windows SmartScreen beim ersten Start. Auf <span class="ui">Weitere Informationen</span> klicken und dann auf <span class="ui">Trotzdem ausführen</span>. Das ist nur beim ersten Start einer neuen Version nötig.</div>
 
 <h3 id="installation-mac">macOS</h3>
+<p>Ab V0.022.0 gibt es NetWatch und den Client für den Mac nur noch für <b>Macs mit Apple-Chip</b> (M1 und neuer). Macs mit Intel-Prozessor bekommen keine Updates mehr angeboten und behalten ihre bisherige Version.</p>
 <ol>
 <li><code>CKV_NetWatch.dmg</code> öffnen und <span class="ui">CKV NetWatch</span> in den Ordner <span class="ui">Programme</span> ziehen.</li>
 <li>Die App ist von Apple notarisiert und startet ohne weitere Freigabe.</li>
@@ -450,6 +451,7 @@ Die Wahl merkt sich NetWatch.</li>
 <li><span class="ui">Ping-Überwachung (dauerhaft, nur Ping)</span>: Ziele, die nur per Ping beobachtet werden, z. B. Drucker oder Access Points. Mit Verfügbarkeit, Verlust, Ausfällen, Ausfallzeit und letztem Ausfall.</li>
 <li><span class="ui">Log – Erstkontakt und Fehler (wer und warum)</span>: die Ereignisse, farbig nach Art.</li>
 </ul>
+<p>Auch wenn die Überwachung nicht läuft, stehen alle eingetragenen Geräte und Ping-Ziele in den Tabellen, mit dem Status „nicht gestartet“ und ohne Messwerte. So sieht man vor dem Start, was überwacht wird. Nach <span class="ui">▶ Start</span> kommen die Messwerte dazu, nach <span class="ui">■ Stopp</span> steht wieder „nicht gestartet“.</p>
 <p><b>Sortieren:</b> Ein Klick auf eine Spaltenüberschrift sortiert die Tabelle danach, ein zweiter Klick dreht die Reihenfolge um. ▲/▼ zeigt die gewählte Spalte. Zahlen, IP-Adressen, Prozente und Zeiten werden nach Wert sortiert („Kasse 2“ vor „Kasse 10“), leere Felder („–“) stehen immer unten. Die Sortierung bleibt erhalten, während sich die Werte laufend aktualisieren. Ist das Log sortiert, springt es bei neuen Einträgen nicht mehr ans Ende. Das gilt auch für die beiden Listen in den Einstellungen.</p>
 
 <h3 id="log">Das Log</h3>
@@ -505,6 +507,7 @@ Die Wahl merkt sich NetWatch.</li>
 <li><b>Schnell anlegen:</b> Felder ausfüllen und <kbd>Enter</kbd> drücken (oder <span class="ui">Hinzufügen</span>). Die Felder leeren sich für das nächste Gerät, der Port bleibt stehen. Ohne Bezeichnung wird die IP als Name genommen.</li>
 <li><b>Ändern:</b> Zeile anklicken, die Werte stehen in den Feldern. Anpassen und <kbd>Enter</kbd> oder <span class="ui">Übernehmen</span>.</li>
 <li><b>Entfernen:</b> Zeile anklicken und <span class="ui">Entfernen</span> oder <kbd>Entf</kbd>. <span class="ui">Neu</span> oder <kbd>Esc</kbd> leert die Felder.</li>
+<li><b>Alle entfernen:</b> <span class="ui">Alle entfernen …</span> leert die ganze Liste nach einer Rückfrage. Wirksam erst nach <span class="ui">Speichern</span>; mit <span class="ui">Verwerfen</span> bleibt alles, wie es war.</li>
 <li>Eine Zeile im alten Format, z. B. <code>Kasse 2;192.168.1.52;9100</code>, kann man ins Feld Bezeichnung einfügen; sie wird beim Hinzufügen aufgeteilt.</li>
 <li>Eine IP steht nur einmal je Liste. Falsche Eingaben (Port keine Zahl, Intervall unter 0,5 s) meldet die Zeile unter den Feldern.</li>
 </ul>
@@ -637,6 +640,9 @@ Die Wahl merkt sich NetWatch.</li>
 
 <h3 id="faq-python-dll">Nach einem Update unter Windows: „Failed to load Python DLL … python312.dll“</h3>
 <p>Kam bei Updates von Versionen bis V0.017.0: Das Update war schon installiert, nur der automatische Neustart danach ist gescheitert. Meldung mit <span class="ui">OK</span> schließen und das Programm normal starten. Ab V0.017.1 startet das Programm nach einem Update wieder von selbst.</p>
+
+<h3 id="faq-klicks">NetWatch reagiert nicht mehr auf Klicks</h3>
+<p>Bis V0.021.1 konnte auf dem Mac die Aufklappliste der Netzwerkkarten-Auswahl (Reiter LAN-Scan) unsichtbar offen bleiben, etwa nach dem Minimieren. Sie fing dann alle Klicks ab, auch Stopp. Abhilfe: ins NetWatch-Fenster klicken und <kbd>Esc</kbd> drücken, sonst NetWatch mit <kbd>⌘</kbd> + <kbd>Q</kbd> beenden und neu starten. Ab V0.021.2 klappt NetWatch eine solche Liste selbst zu.</p>
 
 <h3 id="faq-lan-leer">Der LAN-Scan findet auf dem Mac nur den Router</h3>
 <p>macOS hat den Zugriff aufs lokale Netzwerk nicht erlaubt. NetWatch zeigt dann einen roten Hinweis. Lösung: Systemeinstellungen › Datenschutz &amp; Sicherheit › <span class="ui">Lokales Netzwerk</span> › CKV NetWatch einschalten.</p>
