@@ -427,6 +427,7 @@ footer { color: var(--muted); font-size: 13px; text-align: center; padding: 10px
 <li><span class="ui">Log-Ordner</span> – öffnet den Ordner mit den Logdateien.</li>
 <li><span class="ui">Logs löschen …</span> – räumt alte Logs auf. Die Datei der laufenden Messung bleibt erhalten. Bei sehr vielen Logdateien fragt NetWatch selbst nach.</li>
 <li><span class="ui">CSV exportieren …</span> – speichert alle überwachten Geräte und Ping-Ziele als CSV-Datei für Excel: Art, Bezeichnung, IP, Port(s), Intervall. Läuft die Überwachung, kommen die aktuellen Messwerte dazu (Status, Ping, Verfügbarkeit, Verlust, Störungen/Ausfälle, Ausfallzeit, letzter Fehler, Monitor-App, WLAN, Access Point, Verbindungen, Diagnose), ebenso Geräte, die sich selbst über Monitor-App oder Client gemeldet haben.</li>
+<li><span class="ui">CSV importieren …</span> – liest eine solche Datei wieder ein, z. B. um dieselben Geräte auf einem zweiten PC zu überwachen oder eine in Excel gepflegte Liste zu übernehmen. Genutzt werden nur Art, Bezeichnung, IP / Hostname, Port(s) und Intervall; Messwerte werden ignoriert. Sind schon Einträge da, fragt NetWatch: <b>Ja</b> ergänzt (eine IP, die es schon gibt, bekommt die Werte aus der Datei), <b>Nein</b> ersetzt beide Listen, <b>Abbrechen</b> lässt alles unverändert. Fehlerhafte Zeilen (keine IP, Port keine Zahl) werden übersprungen und vorher angezeigt. Auch mit Komma getrennte Dateien gehen. Fehlt die Spalte „Art“, gilt eine Zeile mit Port als Gerät, sonst als Ping-Ziel. Ping-Ziele gelten sofort; läuft die Überwachung und haben sich Geräte geändert, fragt NetWatch, ob die Messung neu starten soll.</li>
 <li><span class="ui">Einstellungen …</span> – Geräte und Erkennung einstellen (siehe <a href="#ueb-einstellungen">unten</a>).</li>
 </ul>
 
@@ -669,7 +670,7 @@ Die Wahl merkt sich NetWatch, auch über einen Neustart hinweg.</li>
 <p>NetWatch arbeitet im eigenen Netz. Nach außen gehen nur die Update-Prüfung (GitHub, alle 7 Tage oder auf Knopfdruck), die Abfrage der Hersteller-Datenbank und, wenn gewünscht, die Abfrage der öffentlichen IP bei ipinfo.io. Logs und Berichte bleiben auf dem Rechner.</p>
 </section>
 
-<footer>CKV NetWatch · CKV Kassen-Partner GmbH · Handbuch, Stand 17.11.2026</footer>
+<footer>CKV NetWatch · CKV Kassen-Partner GmbH · Handbuch, Stand 19.11.2026</footer>
 </main>
 </div>
 
