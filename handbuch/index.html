@@ -362,6 +362,8 @@ footer { color: var(--muted); font-size: 13px; text-align: center; padding: 10px
 </ul>
 <p>Spalten: Netzname, BSSID, Hersteller, Signal (mit Balken), Kanal, Band, Breite, Sicherheit, Rauschen, SNR, Standard (z. B. 802.11ax). Die eigene Verbindung ist mit ● markiert und blau, offene Netze sind orange, sehr schwache (unter −80 dBm) grau. Ein Klick auf einen Access Point hebt ihn im Spektrum hervor.</p>
 
+<p><b>Verborgene Netze:</b> Ein verstecktes WLAN sendet keinen Namen. Kein Scan auf Mac, Windows oder Linux kann ihn lesen; sichtbar wird er nur, wenn sich gerade ein Gerät damit verbindet. NetWatch zeigt deshalb, <b>welcher Access Point</b> das versteckte Netz sendet: Access Points mit mehreren Netzen leiten deren BSSIDs von ihrer eigenen MAC ab. Passt die BSSID dazu, steht z. B. „(verborgen) · AP von Kasse-WLAN“ in der Tabelle. Die Suche nach „Kasse-WLAN“ findet diese Netze mit. Steht nur „(verborgen)“, gehört das Netz zu keinem Access Point mit sichtbarem Namen. Meldet das System dieselbe BSSID mehrfach auf demselben Kanal, zeigt NetWatch sie nur einmal (mit dem stärksten Signal).</p>
+
 <h3 id="wlan-spektrum">Spektrum und Signalverlauf</h3>
 <table>
 <tr><th>Ansicht</th><th>Zeigt</th></tr>
