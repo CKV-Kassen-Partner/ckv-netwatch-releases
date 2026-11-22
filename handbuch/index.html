@@ -409,9 +409,17 @@ footer { color: var(--muted); font-size: 13px; text-align: center; padding: 10px
 <h3 id="netz-details">Schnittstelle, Adresse, Top-Prozesse</h3>
 <ul>
 <li><span class="ui">Schnittstelle</span>: Upload und Download gesamt, Name, Status, physische Adresse (MAC), Geschwindigkeit, DNS-Server, Netzwerk, bei WLAN zusätzlich Standard und Kanal.</li>
-<li><span class="ui">Adresse</span>: lokale IP und öffentliche IP mit Länderkennung. <span class="ui">↻ Öffentliche IP abfragen</span> fragt bei ipinfo.io nach. Nur dabei geht eine Anfrage nach außen.</li>
+<li><span class="ui">Adresse</span>: lokale IP und öffentliche IP mit Länderkennung. <span class="ui">↻ Öffentliche IP abfragen</span> fragt bei ipinfo.io nach. Nur dabei geht eine Anfrage nach außen. <span class="ui">IP-Einstellungen …</span> siehe <a href="#netz-ip">IP-Einstellungen ändern</a>.</li>
 <li><span class="ui">Top-Prozesse</span>: die Programme mit den meisten Netzwerkverbindungen, mit vollem Namen.</li>
 </ul>
+<h3 id="netz-ip">IP-Einstellungen ändern</h3>
+<p><span class="ui">IP-Einstellungen …</span> im Feld „Adresse“ ändert die IPv4-Einstellungen der oben gewählten Netzwerkkarte, ohne dass Sie die Systemeinstellungen suchen müssen:</p>
+<ul>
+<li><span class="ui">IPv4-Adresse</span>: <span class="ui">Automatisch (DHCP)</span> oder <span class="ui">Manuell</span> mit IP-Adresse, Subnetzmaske (z. B. <code>255.255.255.0</code> oder <code>24</code>) und Router.</li>
+<li><span class="ui">DNS-Server</span>: <span class="ui">Automatisch (vom Router)</span> oder <span class="ui">Manuell</span> mit bevorzugtem und alternativem Server. Bei fester Adresse sind DNS-Server Pflicht, weil sie dann nicht mehr vom Router kommen.</li>
+</ul>
+<p>Vor dem Übernehmen prüft NetWatch die Eingaben, z. B. ob der Router im selben Netz liegt. Zum Ändern fragt das System nach dem Administrator-Passwort (macOS: Passwortabfrage, Windows: Benutzerkontensteuerung, Linux: NetworkManager). Danach liest NetWatch die Einstellung neu und prüft, ob der Router antwortet. Klappt etwas nicht, stellt <span class="ui">Vorherige wiederherstellen</span> den Zustand von vorher her.</p>
+<div class="warn"><b>Vorsicht bei Fernwartung</b>Läuft eine Fernwartung über genau diese Karte, kann die Verbindung nach dem Ändern abbrechen. Unter Linux geht das Ändern nur bei Karten, die der NetworkManager verwaltet.</div>
 <p>Ist der Reiter verdeckt, misst NetWatch nur sparsam weiter und zeichnet nichts. Das spart Energie, gerade auf Laptops.</p>
 </section>
 
